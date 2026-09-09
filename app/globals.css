@@ -236,6 +236,10 @@ button, input, select, textarea { font: inherit; }
   color: var(--blue-dark);
   font-size: 28px;
   line-height: 1;
+  padding: 0 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   box-shadow: 0 8px 20px rgba(15, 39, 72, .16);
 }
