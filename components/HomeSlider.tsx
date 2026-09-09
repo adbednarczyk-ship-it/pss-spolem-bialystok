@@ -23,7 +23,7 @@ export function HomeSlider() {
 
   const inner = (
     <div className="slider-copy">
-      <p className="chip">{current.tag}</p>
+      <p className="slider-kicker">{current.tag}</p>
       <h2>{current.title}</h2>
       <p>{current.text}</p>
       <span className="btn btn-primary">{current.cta}</span>
