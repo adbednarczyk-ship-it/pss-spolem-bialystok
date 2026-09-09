@@ -92,6 +92,9 @@ export function Header() {
           <a className="btn btn-primary" href={company.links.eshop} target="_blank" rel="noopener noreferrer">
             E-sklep
           </a>
+          <a className="btn btn-primary" href={company.links.gastro} target="_blank" rel="noopener noreferrer">
+            Zamów jedzenie
+          </a>
           <button
             className="menu-toggle"
             type="button"
@@ -125,6 +128,9 @@ export function Header() {
             ))}
             <a className="btn btn-primary" href={company.links.eshop} target="_blank" rel="noopener noreferrer">
               Przejdź do e-sklepu
+            </a>
+            <a className="btn btn-primary" href={company.links.gastro} target="_blank" rel="noopener noreferrer" style={{marginTop: 8}}>
+              Zamów jedzenie
             </a>
           </div>
         </div>
