@@ -220,9 +220,24 @@ button, input, select, textarea { font: inherit; }
   margin: 0 0 28px;
   filter: brightness(0) invert(1);
 }
-.footer strong { display: block; margin-bottom: 10px; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px 32px;
+  align-items: start;
+  margin-bottom: 28px;
+}
+.footer-heading {
+  display: block;
+  min-height: 2.7em;
+  margin: 0 0 8px;
+  line-height: 1.35;
+}
 .footer a { color: #fff; }
-.footer .grid { margin-bottom: 28px; }
+@media (max-width: 800px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-heading { min-height: 0; }
+}
 .cookie { position: fixed; bottom: 16px; left: 16px; right: 16px; z-index: 50; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px; max-width: 720px; margin: 0 auto; box-shadow: 0 12px 40px rgba(15, 39, 72, .12); }
 .band { background: var(--cream); }
 .card:hover { border-color: var(--blue); box-shadow: 0 8px 24px rgba(38, 83, 159, .08); }

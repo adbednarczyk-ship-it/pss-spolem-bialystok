@@ -13,9 +13,9 @@ export function Footer() {
           height="68"
         />
       </div>
-      <div className="wrap grid grid-3">
+      <div className="wrap footer-grid">
         <div>
-          <strong>{company.short}</strong>
+          <strong className="footer-heading">{company.name}</strong>
           <p>
             {company.address}
             <br />
@@ -33,7 +33,7 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <strong>Zakupy</strong>
+          <strong className="footer-heading">Zakupy</strong>
           <p>
             <a href={company.links.eshop}>E-sklep</a>
             <br />
@@ -47,7 +47,7 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <strong>Spółdzielnia</strong>
+          <strong className="footer-heading">Spółdzielnia</strong>
           <p>
             <Link href="/produkcja">Produkcja własna</Link>
             <br />
