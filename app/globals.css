@@ -387,8 +387,14 @@ button, input, select, textarea { font: inherit; }
   .stat span { font-size: 11px; }
 }
 
-.article { max-width: 920px; overflow: hidden; }
-.portrait { width: min(280px, 42%); margin: 0 0 18px; }
+.article { max-width: 920px; }
+.article-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 8px 0 28px;
+}
+.portrait { width: 100%; margin: 0; }
 .portrait img {
   width: 100%;
   height: 210px;
@@ -406,8 +412,6 @@ button, input, select, textarea { font: inherit; }
   font-size: 14px;
 }
 .portrait span { color: var(--muted); font-size: 13px; }
-.portrait-left { float: left; margin-right: 28px; }
-.portrait-right { float: right; margin-left: 28px; }
 .letter {
   font-family: Caveat, "Segoe Script", cursive;
   font-size: 28px;
@@ -416,6 +420,6 @@ button, input, select, textarea { font: inherit; }
 }
 .letter p { margin: 0 0 18px; }
 @media (max-width: 700px) {
-  .portrait { float: none; width: 100%; margin: 0 0 16px; }
+  .article-photos { grid-template-columns: 1fr; }
   .letter { font-size: 24px; }
 }

@@ -10,20 +10,22 @@ export default function Page() {
           Spółdzielnia
         </p>
         <h1>Jesteśmy lokalnymi patriotami</h1>
-        <figure className="portrait portrait-left">
+        <div className="article-photos">
+        <figure className="portrait">
           <img src="/prezes-kulesza.jpg" alt={company.president} width={768} height={498} />
           <figcaption>
             <strong>{company.president}</strong>
             <span>Prezes Zarządu</span>
           </figcaption>
         </figure>
-        <figure className="portrait portrait-right">
+        <figure className="portrait">
           <img src="/prezes-chalecka.jpg" alt={company.vice} width={768} height={498} />
           <figcaption>
             <strong>{company.vice}</strong>
             <span>Zastępca Prezesa Zarządu</span>
           </figcaption>
         </figure>
+        </div>
         <div className="letter">
         <p>
           Jesteśmy jedną z najstarszych marek Białegostoku, obecną na rynku od zaborów przez czasy I RP, PRL-u aż po wolną Polskę. W czym tkwi fenomen naszej Spółdzielni, która w czasach wzmożonej konkurencji stale utrzymuje pozycję lidera? Niewątpliwie trudno byłoby zbudować tak rozpoznawalną markę bez najwyższej jakości produktów, oferowanych w sklepach i barach. Na bieżąco sprzedajemy świeżą żywność, którą sami produkujemy w swoich zakładach. Świeże grupy towarowe: pieczywo, mięso, owoce, warzywa, garmażerka i nabiał stanowią ponad 60% udziału w naszym obrocie. O tym, że białostoczanie wybierają rodzime „Społem”, decyduje także to, że sklepy sieci znajdują się blisko klientów, a nasza obsługa nie jest anonimowa — kupujący znają naszych sprzedawców. Nie bez znaczenia jest także pochodzenie produktów. Do naszych wypieków piekarskich i ciastkarskich kupujemy mąkę z terenu województwa podlaskiego. Mięso pochodzi z ubojni lokalnych producentów, podobnie warzywa i owoce. Zakup lokalnych produktów i promocja miejscowych przedsiębiorców niewątpliwie wpisują się w idee patriotyzmu gospodarczego.
