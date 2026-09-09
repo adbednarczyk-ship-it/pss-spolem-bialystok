@@ -403,15 +403,38 @@ button, input, select, textarea { font: inherit; }
 .band-together .btn-ghost { background: rgba(255,255,255,.7); }
 .card:hover { border-color: var(--blue); box-shadow: 0 8px 24px rgba(38, 83, 159, .08); }
 @media (max-width: 980px) {
-  :root { --header-h: 82px; --fold-gap: 32px; }
+  :root { --header-h: 82px; --fold-gap: 16px; }
   .nav { display: none; }
   .menu-toggle { display: inline-flex; }
   .mobile-menu { display: block; }
   .header-bar { padding: 12px 0; gap: 12px; }
   .brand-logo { height: 56px; }
   .header-cta .btn { display: none; }
-  .stat b { font-size: 18px; }
-  .stat span { font-size: 11px; }
+  .stats { display: none; }
+  .spotlight { margin-top: 0; }
+  .spotlight .stats { margin: 0; }
+  .hero {
+    height: auto;
+    min-height: 220px;
+    padding: 36px 0 40px;
+  }
+  .slider-slide {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: auto;
+  }
+  .slider-slide img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .slider-slide::before,
+  .slider-slide::after {
+    width: 10%;
+  }
 }
 
 .article { max-width: 920px; }
