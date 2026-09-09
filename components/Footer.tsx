@@ -15,7 +15,11 @@ export function Footer() {
       </div>
       <div className="wrap footer-grid">
         <div>
-          <strong className="footer-heading">{company.name}</strong>
+          <strong className="footer-heading">
+            Powszechna Spółdzielnia Spożywców
+            <br />
+            „Społem” w Białymstoku
+          </strong>
           <p>
             {company.address}
             <br />
