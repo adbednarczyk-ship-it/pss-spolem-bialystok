@@ -22,11 +22,11 @@ export default function HomePage() {
         </div>
         <HomeSlider />
       </section>
-      <section className="section"><div className="wrap">
+      <section className="section band-news"><div className="wrap">
         <h2>Aktualności</h2>
         <div className="grid grid-3">{news.map((n)=><article className="card" key={n.slug}><p className="muted">{n.date}</p><h3><Link href={`/aktualnosci/${n.slug}`}>{n.title}</Link></h3><p>{n.lead}</p></article>)}</div>
       </div></section>
-      <section className="section band"><div className="wrap">
+      <section className="section band-make"><div className="wrap">
         <h2>Produkcja własna</h2>
         <div className="grid grid-3">
           <Link className="card" href="/produkcja/pieczywo"><h3>Pieczywo</h3><p>Zakwas powyżej 40 godzin. 20 ton mąki dziennie.</p></Link>
@@ -34,7 +34,7 @@ export default function HomePage() {
           <Link className="card" href="/produkcja/torty"><h3>Torty i słodkości</h3><p>Na zamówienie, z dowozem od 300 zł na terenie miasta.</p></Link>
         </div>
       </div></section>
-      <section className="section band"><div className="wrap grid grid-2">
+      <section className="section band-together"><div className="wrap grid grid-2">
         <div><h2>Karta klienta</h2><p>5 zł = 1 punkt. 200 punktów = e-bon 10 zł. 400 punktów = e-bon 30 zł.</p><Link className="btn btn-primary" href="/karta-klienta">Zasady programu</Link></div>
         <div><h2>Lokalni patrioci</h2><p>Mąka, mięso, owoce i warzywa z Podlasia. Sklepy blisko domu.</p><Link className="btn btn-ghost" href="/lokalni-patrioci">Czytaj więcej</Link></div>
       </div></section>
