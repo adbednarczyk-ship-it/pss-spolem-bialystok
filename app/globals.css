@@ -165,9 +165,23 @@ button, input, select, textarea { font: inherit; }
 .hero .btn-light:hover { background: var(--blue-soft); }
 .hero .btn-outline:hover { background: rgba(255,255,255,.22); }
 .hero {
-  background: linear-gradient(120deg, rgba(15, 39, 72, .88), rgba(38, 83, 159, .72)), var(--blue-dark);
+  position: relative;
+  isolation: isolate;
   color: #fff;
-  padding: 72px 0 64px;
+  padding: 96px 0 88px;
+  background-color: var(--blue-deep);
+  background-image:
+    linear-gradient(105deg, rgba(15, 39, 72, .82) 0%, rgba(15, 39, 72, .58) 36%, rgba(38, 83, 159, .22) 62%, rgba(15, 39, 72, .35) 100%),
+    url("/hero-market.webp");
+  background-size: cover;
+  background-position: center 45%;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(15, 39, 72, .12), rgba(15, 39, 72, .28));
 }
 .hero h1 { font-size: clamp(40px, 7vw, 76px); line-height: .95; margin: 0 0 16px; max-width: 14ch; }
 .hero p { max-width: 46ch; font-size: 18px; opacity: .92; }
