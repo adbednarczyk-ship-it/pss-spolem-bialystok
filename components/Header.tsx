@@ -27,11 +27,13 @@ export function Header() {
       <header className="header">
         <div className="wrap">
           <Link href="/" className="logo">
-            <div className="mark">S</div>
-            <div>
-              <strong>SPOŁEM</strong>
-              <span>Białystok</span>
-            </div>
+            <img
+              src="/logo.webp"
+              alt='PSS Społem Białystok — Zaufaj tradycji'
+              className="brand-logo"
+              width={575}
+              height={178}
+            />
           </Link>
           <nav className="nav" aria-label="Główne">
             {links.map((l) => (

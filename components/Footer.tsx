@@ -6,6 +6,7 @@ export function Footer() {
     <footer className="footer">
       <div className="wrap grid grid-3">
         <div>
+          <img src="/logo.webp" alt="PSS Społem Białystok" width="220" height="68" style={{height:48,width:"auto",marginBottom:12,filter:"brightness(0) invert(1)"}} />
           <strong>{company.short}</strong>
           <p>
             {company.address}

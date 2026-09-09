@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   description:
     "Sieć sklepów Społem w Białymstoku, pieczywo i wędliny z własnych zakładów, bary drive, e-sklep i karta klienta.",
   metadataBase: new URL("https://pss-spolem-bialystok.vercel.app"),
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
