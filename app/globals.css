@@ -236,6 +236,7 @@ button, input, select, textarea { font: inherit; }
 .slider { width: 100%; margin: 0; position: relative; z-index: 2; }
 .slider-frame { position: relative; width: 100%; }
 .slider-slide {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -245,7 +246,7 @@ button, input, select, textarea { font: inherit; }
   padding: 0;
   overflow: hidden;
   background:
-    linear-gradient(90deg, var(--blue-deep) 0%, var(--blue) 22%, var(--blue-soft) 50%, var(--blue) 78%, var(--blue-deep) 100%);
+    radial-gradient(120% 80% at 50% 50%, #3a6bb8 0%, var(--blue) 42%, var(--blue-deep) 100%);
 }
 .slider-slide img {
   width: auto;
@@ -254,6 +255,26 @@ button, input, select, textarea { font: inherit; }
   object-fit: contain;
   object-position: center;
   display: block;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 11%, #000 89%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 11%, #000 89%, transparent 100%);
+}
+.slider-slide::before,
+.slider-slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 22%;
+  pointer-events: none;
+  z-index: 1;
+}
+.slider-slide::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(15,39,72,.92) 0%, rgba(38,83,159,.28) 58%, transparent 100%);
+}
+.slider-slide::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(15,39,72,.92) 0%, rgba(38,83,159,.28) 58%, transparent 100%);
 }
 .slider-copy { max-width: 36rem; padding-top: 36px; }
 .slider-kicker {
