@@ -6,7 +6,8 @@ export default function HomePage() {
   return (
     <>
       <section className="hero">
-        <div className="wrap">
+        <div className="wrap hero-copy">
+          <p className="hero-kicker">Tradycja handlu od {company.founded}</p>
           <h1>Świeże. Lokalne. Nasze.</h1>
           <p>Sieć sklepów, własna piekarnia, wędliny i bary drive. Spółdzielnia z polskim kapitałem — blisko domu.</p>
           <div className="hero-actions">

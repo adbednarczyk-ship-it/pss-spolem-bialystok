@@ -58,9 +58,6 @@ export function Header() {
             width={575}
             height={178}
           />
-          <span className="brand-meta">
-            <span className="brand-motto">Tradycja handlu od {company.founded}</span>
-          </span>
         </Link>
 
         <nav className="nav" aria-label="Główne">
