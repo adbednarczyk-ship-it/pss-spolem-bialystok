@@ -18,7 +18,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <HomeSlider />
       <div className="wrap">
         <div className="stats">
           {[["1897","rok założenia"],["1700+","pracowników"],["17 000 m²","powierzchni supermarketów"],["700 t","pieczywa miesięcznie"],["ISO 22000","bezpieczeństwo żywności"]].map(([n,l]) => (
@@ -26,6 +25,7 @@ export default function HomePage() {
           ))}
         </div>
       </div>
+      <HomeSlider />
       <section className="section band"><div className="wrap">
         <h2>Promocje</h2>
         <div className="grid grid-3">{promos.map((p)=><article className="card" key={p.title}><span className="chip">{p.tag}</span><h3>{p.title}</h3><p>{p.text}</p></article>)}</div>

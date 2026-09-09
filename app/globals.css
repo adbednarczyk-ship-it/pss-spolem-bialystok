@@ -196,18 +196,18 @@ button, input, select, textarea { font: inherit; }
 .hero h1 { font-size: clamp(40px, 7vw, 76px); line-height: .95; margin: 0 0 16px; max-width: 14ch; }
 .hero p { max-width: 46ch; font-size: 18px; opacity: .92; }
 .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
-.slider { margin-top: -36px; position: relative; z-index: 2; padding-bottom: 8px; }
-.slider-frame { position: relative; }
+.slider { width: 100%; margin: 36px 0 0; position: relative; z-index: 2; }
+.slider-frame { position: relative; width: 100%; }
 .slider-slide {
   display: block;
-  min-height: 230px;
-  padding: 32px 72px 48px 36px;
-  border-radius: 22px;
+  width: 100%;
+  min-height: 280px;
+  padding: 48px 0 64px;
+  border-radius: 0;
   color: #fff;
   background:
     linear-gradient(115deg, rgba(15, 39, 72, .94), rgba(38, 83, 159, .78)),
     url("/hero-market.webp") center/cover;
-  box-shadow: 0 18px 40px rgba(15, 39, 72, .18);
 }
 .slider-slide h2 { margin: 10px 0 8px; font-size: clamp(26px, 4vw, 40px); max-width: 16ch; }
 .slider-slide p { max-width: 46ch; margin: 0 0 18px; color: rgba(255,255,255,.9); }
@@ -226,11 +226,12 @@ button, input, select, textarea { font: inherit; }
   cursor: pointer;
   box-shadow: 0 8px 20px rgba(15, 39, 72, .16);
 }
-.slider-nav.prev { left: 12px; }
-.slider-nav.next { right: 12px; }
+.slider-nav.prev { left: max(12px, calc((100vw - min(1120px, calc(100% - 32px))) / 2 - 8px)); }
+.slider-nav.next { right: max(12px, calc((100vw - min(1120px, calc(100% - 32px))) / 2 - 8px)); }
 .slider-dots {
   position: absolute;
-  right: 28px;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 18px;
   display: flex;
   gap: 8px;
@@ -249,7 +250,7 @@ button, input, select, textarea { font: inherit; }
   .slider-slide { padding: 24px 20px 52px; }
   .slider-nav { display: none; }
 }
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 18px; position: relative; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: -28px; position: relative; z-index: 3; }
 .stat, .card, .panel { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
 .stat b { display: block; font-size: 28px; color: var(--blue); }
 .stat span, .muted { color: var(--muted); font-family: "Segoe UI", system-ui, sans-serif; font-size: 14px; }

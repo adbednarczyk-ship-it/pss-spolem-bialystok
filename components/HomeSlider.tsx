@@ -30,35 +30,33 @@ export function HomeSlider() {
 
   return (
     <section className="slider" aria-roledescription="karuzela" aria-label="Promocje i ważne informacje">
-      <div className="wrap">
-        <div className="slider-frame">
-          {current.href.startsWith("http") ? (
-            <a className="slider-slide" href={current.href} target="_blank" rel="noopener noreferrer">
-              {inner}
-            </a>
-          ) : (
-            <Link className="slider-slide" href={current.href}>
-              {inner}
-            </Link>
-          )}
-          <button className="slider-nav prev" type="button" aria-label="Poprzedni slajd" onClick={() => go(-1)}>
-            ‹
-          </button>
-          <button className="slider-nav next" type="button" aria-label="Następny slajd" onClick={() => go(1)}>
-            ›
-          </button>
-          <div className="slider-dots">
-            {slides.map((slide, i) => (
-              <button
-                key={slide.title}
-                type="button"
-                className={i === index ? "active" : undefined}
-                aria-label={`Slajd ${i + 1}: ${slide.title}`}
-                aria-current={i === index}
-                onClick={() => setIndex(i)}
-              />
-            ))}
-          </div>
+      <div className="slider-frame">
+        {current.href.startsWith("http") ? (
+          <a className="slider-slide" href={current.href} target="_blank" rel="noopener noreferrer">
+            <div className="wrap">{inner}</div>
+          </a>
+        ) : (
+          <Link className="slider-slide" href={current.href}>
+            <div className="wrap">{inner}</div>
+          </Link>
+        )}
+        <button className="slider-nav prev" type="button" aria-label="Poprzedni slajd" onClick={() => go(-1)}>
+          ‹
+        </button>
+        <button className="slider-nav next" type="button" aria-label="Następny slajd" onClick={() => go(1)}>
+          ›
+        </button>
+        <div className="slider-dots">
+          {slides.map((slide, i) => (
+            <button
+              key={slide.title}
+              type="button"
+              className={i === index ? "active" : undefined}
+              aria-label={`Slajd ${i + 1}: ${slide.title}`}
+              aria-current={i === index}
+              onClick={() => setIndex(i)}
+            />
+          ))}
         </div>
       </div>
     </section>
