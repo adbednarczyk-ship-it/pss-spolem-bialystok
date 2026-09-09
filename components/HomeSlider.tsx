@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { slides } from "@/lib/data";
 
@@ -21,15 +20,6 @@ export function HomeSlider() {
     setIndex((i) => (i + dir + slides.length) % slides.length);
   }
 
-  const inner = (
-    <div className="slider-copy">
-      <p className="slider-kicker">{current.tag}</p>
-      <h2>{current.title}</h2>
-      <p>{current.text}</p>
-      <span className="btn btn-primary">{current.cta}</span>
-    </div>
-  );
-
   return (
     <section
       className="slider"
@@ -39,25 +29,9 @@ export function HomeSlider() {
       onMouseLeave={() => setPaused(false)}
     >
       <div className="slider-frame">
-        {current.href.startsWith("http") ? (
-          <a
-            className="slider-slide"
-            href={current.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ backgroundImage: `linear-gradient(115deg, rgba(15,39,72,.88), rgba(38,83,159,.55)), url("${current.image}")` }}
-          >
-            <div className="wrap">{inner}</div>
-          </a>
-        ) : (
-          <Link
-            className="slider-slide"
-            href={current.href}
-            style={{ backgroundImage: `linear-gradient(115deg, rgba(15,39,72,.88), rgba(38,83,159,.55)), url("${current.image}")` }}
-          >
-            <div className="wrap">{inner}</div>
-          </Link>
-        )}
+        <div className="slider-slide" role="img" aria-label={current.title}>
+          <img src={current.image} alt={current.title} />
+        </div>
         <button className="slider-nav prev" type="button" aria-label="Poprzedni slajd" onClick={() => go(-1)}>
           ‹
         </button>

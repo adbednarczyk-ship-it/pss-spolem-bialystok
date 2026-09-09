@@ -110,44 +110,20 @@ export const promos = [
 
 export const slides = [
   {
-    tag: "Promocje",
-    title: "Gazetka i asy cenowe",
-    text: "Cotygodniowe obniżki w supermarketach Społem. Aktualną gazetkę znajdziesz w sklepie i wkrótce tutaj.",
-    href: "/promocje",
-    cta: "Zobacz promocje",
-    image: "/slides/01-warzywa.jpg",
+    title: "Nowości prosto z pieca",
+    image: "/slides/promo-pieczywo.webp",
   },
   {
-    tag: "E-sklep",
-    title: "Zakupy z dowozem do domu",
-    text: "Zamów online lub telefonicznie 693 503 504. Odbiór też w markecie Opałek.",
-    href: "https://esklep.spolembialystok.pl/",
-    cta: "Przejdź do e-sklepu",
-    image: "/slides/02-sklep.jpg",
+    title: "Chleb na trzonie kamiennym",
+    image: "/slides/promo-chleb.webp",
   },
   {
-    tag: "Karta klienta",
-    title: "Społem znaczy razem",
-    text: "5 zł = 1 punkt. 200 punktów to e-bon 10 zł, 400 punktów — e-bon 30 zł.",
-    href: "/karta-klienta",
-    cta: "Zasady programu",
-    image: "/slides/03-karta.jpg",
+    title: "Kiełbasa dojlidzka",
+    image: "/slides/promo-kielbasa.webp",
   },
   {
-    tag: "Nowość",
-    title: "Supermarket i bar Stroma",
-    text: "Na Słonecznym Stoku: sklep, bar z 72 miejscami i okienko drive.",
-    href: "/sklepy/stroma",
-    cta: "Sprawdź lokalizację",
-    image: "/slides/04-supermarket.jpg",
-  },
-  {
-    tag: "Produkcja własna",
-    title: "Pieczywo z podlaskiej mąki",
-    text: "Zakwas powyżej 40 godzin. Około 20 ton mąki dziennie i 700 ton pieczywa miesięcznie.",
-    href: "/produkcja/pieczywo",
-    cta: "Nasza piekarnia",
-    image: "/slides/05-pieczywo.jpg",
+    title: "Zakupy wprost do domu",
+    image: "/slides/promo-esklep.webp",
   },
 ];
 
