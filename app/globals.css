@@ -41,11 +41,14 @@ button, input, select, textarea { font: inherit; }
   border-bottom: 1px solid var(--line);
   box-shadow: 0 10px 30px rgba(15, 39, 72, .06);
 }
+.header .wrap {
+  width: min(1600px, calc(100% - 40px));
+}
 .header-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
+  gap: 20px;
   padding: 18px 0;
 }
 .logo { display: flex; align-items: center; min-width: 0; flex: 0 0 auto; }
@@ -59,12 +62,20 @@ button, input, select, textarea { font: inherit; }
 .nav {
   display: flex;
   align-items: stretch;
-  justify-content: center;
-  gap: 6px;
+  justify-content: space-evenly;
+  gap: 0;
   flex: 1;
+  min-width: 0;
   font-family: "Segoe UI", system-ui, sans-serif;
 }
-.nav-item { position: relative; padding-bottom: 18px; margin-bottom: -18px; }
+.nav-item {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 18px;
+  margin-bottom: -18px;
+}
 .nav-link {
   display: inline-flex;
   align-items: center;
@@ -102,6 +113,7 @@ button, input, select, textarea { font: inherit; }
   pointer-events: auto;
   transform: none;
 }
+.nav-item:last-child .nav-panel { left: auto; right: 0; }
 .nav-panel a {
   display: grid;
   gap: 2px;
