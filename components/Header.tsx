@@ -48,11 +48,10 @@ const groups = [
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const [locked, setLocked] = useState(false);
+  const [lockedGroup, setLockedGroup] = useState<string | null>(null);
 
   useEffect(() => {
     setOpen(false);
-    setLocked(true);
     const el = document.activeElement;
     if (el instanceof HTMLElement) el.blur();
   }, [pathname]);
@@ -70,14 +69,16 @@ export function Header() {
           />
         </Link>
 
-        <nav
-          className={`nav${locked ? " is-locked" : ""}`}
-          aria-label="Główne"
-          onMouseLeave={() => setLocked(false)}
-        >
+        <nav className="nav" aria-label="Główne">
           {groups.map((group) => (
-            <div className="nav-item" key={group.label}>
-              <Link href={group.href} className="nav-link" onClick={() => setLocked(true)}>
+            <div
+              className={`nav-item${lockedGroup === group.label ? " is-closed" : ""}`}
+              key={group.label}
+              onMouseLeave={() => {
+                if (lockedGroup === group.label) setLockedGroup(null);
+              }}
+            >
+              <Link href={group.href} className="nav-link" onClick={() => setLockedGroup(group.label)}>
                 {group.label}
                 <span className="nav-caret" aria-hidden>
                   ▾
@@ -91,7 +92,7 @@ export function Header() {
                       <span>{item.note}</span>
                     </a>
                   ) : (
-                    <Link key={item.href} href={item.href} onClick={() => setLocked(true)}>
+                    <Link key={item.href} href={item.href} onClick={() => setLockedGroup(group.label)}>
                       <strong>{item.label}</strong>
                       <span>{item.note}</span>
                     </Link>

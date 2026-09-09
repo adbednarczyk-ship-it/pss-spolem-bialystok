@@ -121,11 +121,11 @@ button, input, select, textarea { font: inherit; }
   pointer-events: auto;
   transform: none;
 }
-.nav.is-locked .nav-panel {
+.nav-item.is-closed .nav-panel {
   opacity: 0 !important;
   pointer-events: none !important;
 }
-.nav.is-locked .nav-link {
+.nav-item.is-closed .nav-link {
   background: transparent;
   color: var(--ink);
 }
