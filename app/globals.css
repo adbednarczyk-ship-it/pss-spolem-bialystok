@@ -21,7 +21,7 @@
 html, body { margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 .page-enter {
-  animation: page-enter .7s ease;
+  animation: page-enter 1s ease;
 }
 @keyframes page-enter {
   from { opacity: 0; transform: translateY(10px); }
