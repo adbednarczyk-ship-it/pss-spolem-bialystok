@@ -13,6 +13,7 @@
   --radius: 18px;
   --header-h: 88px;
   --fold-gap: 40px;
+  --panel-gap: 16px;
   --banner-h: calc((100dvh - var(--header-h) - var(--fold-gap)) / 2);
   --red: var(--blue);
   --red-dark: var(--blue-dark);
@@ -233,7 +234,7 @@ button, input, select, textarea { font: inherit; }
 .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
 .spotlight { margin-top: -76px; }
 .spotlight .stats { margin: 0 0 16px; }
-.slider { width: 100%; margin: 0; position: relative; z-index: 2; }
+.slider { width: 100%; margin: 0 0 var(--panel-gap); position: relative; z-index: 2; }
 .slider-frame { position: relative; width: 100%; }
 .slider-slide {
   position: relative;
@@ -339,6 +340,7 @@ button, input, select, textarea { font: inherit; }
 .stat b { display: block; font-size: 22px; color: var(--blue); }
 .stat span, .muted { color: var(--muted); font-family: "Segoe UI", system-ui, sans-serif; font-size: 14px; }
 .section { padding: 64px 0; }
+.section + .section { margin-top: var(--panel-gap); }
 .section h2 { font-size: clamp(28px, 4vw, 42px); margin: 0 0 8px; }
 .grid { display: grid; gap: 16px; }
 .grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
@@ -350,7 +352,7 @@ button, input, select, textarea { font: inherit; }
 .search { width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: #fff; }
 .form { display: grid; gap: 12px; }
 .form input, .form textarea, .form select { width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: #fff; }
-.footer { background: var(--blue-deep); color: #e8eef7; padding: 48px 0 24px; font-family: "Segoe UI", system-ui, sans-serif; font-size: 14px; }
+.footer { margin-top: var(--panel-gap); background: var(--blue-deep); color: #e8eef7; padding: 48px 0 24px; font-family: "Segoe UI", system-ui, sans-serif; font-size: 14px; }
 .footer .wrap { width: min(1240px, calc(100% - 48px)); }
 .footer-logo {
   display: block;
@@ -416,9 +418,9 @@ button, input, select, textarea { font: inherit; }
   .brand-logo { height: 56px; }
   .header-cta .btn { display: none; }
   .stats { display: none; }
-  .spotlight { margin-top: 14px; }
+  .spotlight { margin-top: var(--panel-gap); }
   .spotlight .stats { margin: 0; }
-  .slider { padding-top: 2px; }
+  .slider { padding-top: 0; margin-bottom: var(--panel-gap); }
   .hero {
     height: auto;
     min-height: 220px;
