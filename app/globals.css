@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 :root {
   --blue: #26539f;
   --blue-dark: #16386f;
@@ -414,7 +414,7 @@ button, input, select, textarea { font: inherit; }
 }
 .portrait span { color: var(--muted); font-size: 13px; }
 .letter {
-  font-family: "Marck Script", "Segoe Script", cursive;
+  font-family: Sacramento, "Segoe Script", cursive;
   font-size: 28px;
   font-weight: 400;
   line-height: 1.4;
