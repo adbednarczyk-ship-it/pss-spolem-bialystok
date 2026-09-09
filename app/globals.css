@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 :root {
   --blue: #26539f;
   --blue-dark: #16386f;
@@ -413,15 +412,8 @@ button, input, select, textarea { font: inherit; }
   font-size: 14px;
 }
 .portrait span { color: var(--muted); font-size: 13px; }
-.letter {
-  font-family: Sacramento, "Segoe Script", cursive;
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 1.4;
-}
 .letter p { margin: 0 0 18px; }
 .letter-sign { text-align: right; }
 @media (max-width: 700px) {
   .article-photos { grid-template-columns: 1fr; }
-  .letter { font-size: 24px; }
 }
