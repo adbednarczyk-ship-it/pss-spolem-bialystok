@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { company } from "@/lib/data";
 
 const groups = [
@@ -45,7 +46,16 @@ const groups = [
 ];
 
 export function Header() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [locked, setLocked] = useState(false);
+
+  useEffect(() => {
+    setOpen(false);
+    setLocked(true);
+    const el = document.activeElement;
+    if (el instanceof HTMLElement) el.blur();
+  }, [pathname]);
 
   return (
     <header className="header">
@@ -60,10 +70,14 @@ export function Header() {
           />
         </Link>
 
-        <nav className="nav" aria-label="Główne">
+        <nav
+          className={`nav${locked ? " is-locked" : ""}`}
+          aria-label="Główne"
+          onMouseLeave={() => setLocked(false)}
+        >
           {groups.map((group) => (
             <div className="nav-item" key={group.label}>
-              <Link href={group.href} className="nav-link">
+              <Link href={group.href} className="nav-link" onClick={() => setLocked(true)}>
                 {group.label}
                 <span className="nav-caret" aria-hidden>
                   ▾
@@ -77,7 +91,7 @@ export function Header() {
                       <span>{item.note}</span>
                     </a>
                   ) : (
-                    <Link key={item.href} href={item.href}>
+                    <Link key={item.href} href={item.href} onClick={() => setLocked(true)}>
                       <strong>{item.label}</strong>
                       <span>{item.note}</span>
                     </Link>

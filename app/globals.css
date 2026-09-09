@@ -97,8 +97,7 @@ button, input, select, textarea { font: inherit; }
   color: var(--ink);
 }
 .nav-caret { font-size: 11px; opacity: .55; }
-.nav-item:hover .nav-link,
-.nav-item:focus-within .nav-link {
+.nav-item:hover .nav-link {
   background: var(--blue-soft);
   color: var(--blue-dark);
 }
@@ -117,11 +116,18 @@ button, input, select, textarea { font: inherit; }
   transform: translateY(8px);
   transition: .18s ease;
 }
-.nav-item:hover .nav-panel,
-.nav-item:focus-within .nav-panel {
+.nav-item:hover .nav-panel {
   opacity: 1;
   pointer-events: auto;
   transform: none;
+}
+.nav.is-locked .nav-panel {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+.nav.is-locked .nav-link {
+  background: transparent;
+  color: var(--ink);
 }
 .nav-item:last-child .nav-panel { left: auto; right: 0; }
 .nav-panel a {
