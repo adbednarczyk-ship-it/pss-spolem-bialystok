@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { company, news, promos } from "@/lib/data";
 import { StoreFinder } from "@/components/StoreFinder";
+import { HomeSlider } from "@/components/HomeSlider";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <HomeSlider />
       <div className="wrap">
         <div className="stats">
           {[["1897","rok założenia"],["1700+","pracowników"],["17 000 m²","powierzchni supermarketów"],["700 t","pieczywa miesięcznie"],["ISO 22000","bezpieczeństwo żywności"]].map(([n,l]) => (

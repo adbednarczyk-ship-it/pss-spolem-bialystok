@@ -108,6 +108,44 @@ export const promos = [
   { title: "Karta klienta", text: "Punkty za zakupy wymienisz na e-bony do sklepów i barów.", tag: "lojalność" },
 ];
 
+export const slides = [
+  {
+    tag: "Promocje",
+    title: "Gazetka i asy cenowe",
+    text: "Cotygodniowe obniżki w supermarketach Społem. Aktualną gazetkę znajdziesz w sklepie i wkrótce tutaj.",
+    href: "/promocje",
+    cta: "Zobacz promocje",
+  },
+  {
+    tag: "E-sklep",
+    title: "Zakupy z dowozem do domu",
+    text: "Zamów online lub telefonicznie 693 503 504. Odbiór też w markecie Opałek.",
+    href: "https://esklep.spolembialystok.pl/",
+    cta: "Przejdź do e-sklepu",
+  },
+  {
+    tag: "Karta klienta",
+    title: "Społem znaczy razem",
+    text: "5 zł = 1 punkt. 200 punktów to e-bon 10 zł, 400 punktów — e-bon 30 zł.",
+    href: "/karta-klienta",
+    cta: "Zasady programu",
+  },
+  {
+    tag: "Nowość",
+    title: "Supermarket i bar Stroma",
+    text: "Na Słonecznym Stoku: sklep, bar z 72 miejscami i okienko drive.",
+    href: "/sklepy/stroma",
+    cta: "Sprawdź lokalizację",
+  },
+  {
+    tag: "Produkcja własna",
+    title: "Pieczywo z podlaskiej mąki",
+    text: "Zakwas powyżej 40 godzin. Około 20 ton mąki dziennie i 700 ton pieczywa miesięcznie.",
+    href: "/produkcja/pieczywo",
+    cta: "Nasza piekarnia",
+  },
+];
+
 export function mapsUrl(address: string) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${address}, Białystok`)}`;
 }
