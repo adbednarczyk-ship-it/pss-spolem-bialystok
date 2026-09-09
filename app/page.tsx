@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { company, news } from "@/lib/data";
-import { StoreFinder } from "@/components/StoreFinder";
 import { HomeSlider } from "@/components/HomeSlider";
 
 export default function HomePage() {
@@ -34,11 +33,6 @@ export default function HomePage() {
           <Link className="card" href="/produkcja/wedliny"><h3>Wędliny i garmażerka</h3><p>Ponad 150 pozycji. Bez mięsa oddzielanego mechanicznie.</p></Link>
           <Link className="card" href="/produkcja/torty"><h3>Torty i słodkości</h3><p>Na zamówienie, z dowozem od 300 zł na terenie miasta.</p></Link>
         </div>
-      </div></section>
-      <section className="section"><div className="wrap">
-        <h2>Znajdź sklep</h2>
-        <StoreFinder compact />
-        <p style={{marginTop:16}}><Link className="btn btn-ghost" href="/sklepy">Pełna lista</Link></p>
       </div></section>
       <section className="section band"><div className="wrap grid grid-2">
         <div><h2>Karta klienta</h2><p>5 zł = 1 punkt. 200 punktów = e-bon 10 zł. 400 punktów = e-bon 30 zł.</p><Link className="btn btn-primary" href="/karta-klienta">Zasady programu</Link></div>
