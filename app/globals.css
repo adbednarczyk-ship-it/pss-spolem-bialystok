@@ -11,7 +11,7 @@
   --gold: #c4a35a;
   --line: #d5deeb;
   --radius: 18px;
-  --header-h: 124px;
+  --header-h: 88px;
   --fold-gap: 40px;
   --banner-h: calc((100dvh - var(--header-h) - var(--fold-gap)) / 2);
   --red: var(--blue);
@@ -49,14 +49,14 @@ button, input, select, textarea { font: inherit; }
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 18px 0;
+  padding: 8px 0;
 }
 .logo { display: flex; align-items: center; min-width: 0; flex: 0 0 auto; }
 .brand-logo {
-  height: 86px;
+  height: 64px;
   width: auto;
   display: block;
-  max-width: min(360px, 62vw);
+  max-width: min(280px, 62vw);
   object-fit: contain;
 }
 .nav {
@@ -80,7 +80,7 @@ button, input, select, textarea { font: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 12px 16px;
+  padding: 8px 14px;
   border-radius: 999px;
   font-size: 15px;
   font-weight: 600;
