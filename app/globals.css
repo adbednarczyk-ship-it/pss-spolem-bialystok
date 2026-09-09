@@ -52,10 +52,24 @@ button, input, select, textarea { font: inherit; }
   padding: 10px 16px; border-radius: 999px; border: 1px solid transparent;
   font-family: "Segoe UI", system-ui, sans-serif; font-size: 14px; font-weight: 600; cursor: pointer;
 }
-.btn-primary { background: var(--blue); color: #fff; }
+.btn-primary { background: var(--blue); color: #fff; box-shadow: 0 8px 20px rgba(38, 83, 159, .22); }
 .btn-primary:hover { background: var(--blue-dark); }
 .btn-ghost { background: transparent; border-color: var(--ink); }
-.btn-light { background: #fff; border-color: var(--line); }
+.btn-light { background: #fff; color: var(--blue); border-color: #fff; box-shadow: 0 8px 20px rgba(15, 39, 72, .16); }
+.btn-outline {
+  background: rgba(255,255,255,.12);
+  color: #fff;
+  border-color: rgba(255,255,255,.85);
+  box-shadow: 0 8px 20px rgba(15, 39, 72, .16);
+}
+.hero .btn-primary {
+  background: #fff;
+  color: var(--blue);
+  border-color: #fff;
+}
+.hero .btn-primary:hover { background: var(--blue-soft); color: var(--blue-dark); }
+.hero .btn-light:hover { background: var(--blue-soft); }
+.hero .btn-outline:hover { background: rgba(255,255,255,.22); }
 .hero {
   background: linear-gradient(120deg, rgba(15, 39, 72, .88), rgba(38, 83, 159, .72)), var(--blue-dark);
   color: #fff;

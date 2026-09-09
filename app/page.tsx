@@ -13,7 +13,7 @@ export default function HomePage() {
           <div className="hero-actions">
             <Link className="btn btn-primary" href="/sklepy">Znajdź sklep</Link>
             <a className="btn btn-light" href={company.links.eshop} target="_blank" rel="noopener noreferrer">Zamów w e-sklepie</a>
-            <Link className="btn btn-light" href="/karta-klienta">Karta klienta</Link>
+            <Link className="btn btn-outline" href="/karta-klienta">Karta klienta</Link>
           </div>
         </div>
       </section>
