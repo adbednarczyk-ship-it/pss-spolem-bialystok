@@ -369,8 +369,8 @@ button, input, select, textarea { font: inherit; }
   isolation: isolate;
   color: var(--ink);
   background:
-    linear-gradient(110deg, rgba(232, 238, 247, .92) 0%, rgba(247, 249, 252, .86) 55%, rgba(232, 238, 247, .9) 100%),
-    url("/slides/01-warzywa.jpg") right center / cover;
+    linear-gradient(110deg, rgba(247, 249, 252, .82) 0%, rgba(232, 238, 247, .72) 48%, rgba(247, 249, 252, .8) 100%),
+    url("/bialystok-arch.jpg") center 40% / cover;
 }
 .band-together .btn-ghost { background: rgba(255,255,255,.7); }
 .card:hover { border-color: var(--blue); box-shadow: 0 8px 24px rgba(38, 83, 159, .08); }
