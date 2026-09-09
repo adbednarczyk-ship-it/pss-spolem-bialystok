@@ -115,6 +115,7 @@ export const slides = [
     text: "Cotygodniowe obniżki w supermarketach Społem. Aktualną gazetkę znajdziesz w sklepie i wkrótce tutaj.",
     href: "/promocje",
     cta: "Zobacz promocje",
+    image: "/slides/01-warzywa.jpg",
   },
   {
     tag: "E-sklep",
@@ -122,6 +123,7 @@ export const slides = [
     text: "Zamów online lub telefonicznie 693 503 504. Odbiór też w markecie Opałek.",
     href: "https://esklep.spolembialystok.pl/",
     cta: "Przejdź do e-sklepu",
+    image: "/slides/02-sklep.jpg",
   },
   {
     tag: "Karta klienta",
@@ -129,6 +131,7 @@ export const slides = [
     text: "5 zł = 1 punkt. 200 punktów to e-bon 10 zł, 400 punktów — e-bon 30 zł.",
     href: "/karta-klienta",
     cta: "Zasady programu",
+    image: "/slides/03-karta.jpg",
   },
   {
     tag: "Nowość",
@@ -136,6 +139,7 @@ export const slides = [
     text: "Na Słonecznym Stoku: sklep, bar z 72 miejscami i okienko drive.",
     href: "/sklepy/stroma",
     cta: "Sprawdź lokalizację",
+    image: "/slides/04-supermarket.jpg",
   },
   {
     tag: "Produkcja własna",
@@ -143,6 +147,7 @@ export const slides = [
     text: "Zakwas powyżej 40 godzin. Około 20 ton mąki dziennie i 700 ton pieczywa miesięcznie.",
     href: "/produkcja/pieczywo",
     cta: "Nasza piekarnia",
+    image: "/slides/05-pieczywo.jpg",
   },
 ];
 

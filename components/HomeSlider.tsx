@@ -6,37 +6,55 @@ import { slides } from "@/lib/data";
 
 export function HomeSlider() {
   const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
   const current = slides[index];
 
   useEffect(() => {
+    if (paused) return;
     const id = window.setInterval(() => {
       setIndex((i) => (i + 1) % slides.length);
     }, 7000);
     return () => window.clearInterval(id);
-  }, []);
+  }, [paused]);
 
   function go(dir: number) {
     setIndex((i) => (i + dir + slides.length) % slides.length);
   }
 
   const inner = (
-    <>
+    <div className="slider-copy">
       <p className="chip">{current.tag}</p>
       <h2>{current.title}</h2>
       <p>{current.text}</p>
       <span className="btn btn-primary">{current.cta}</span>
-    </>
+    </div>
   );
 
   return (
-    <section className="slider" aria-roledescription="karuzela" aria-label="Promocje i ważne informacje">
+    <section
+      className="slider"
+      aria-roledescription="karuzela"
+      aria-label="Promocje i ważne informacje"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       <div className="slider-frame">
         {current.href.startsWith("http") ? (
-          <a className="slider-slide" href={current.href} target="_blank" rel="noopener noreferrer">
+          <a
+            className="slider-slide"
+            href={current.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ backgroundImage: `linear-gradient(115deg, rgba(15,39,72,.88), rgba(38,83,159,.55)), url("${current.image}")` }}
+          >
             <div className="wrap">{inner}</div>
           </a>
         ) : (
-          <Link className="slider-slide" href={current.href}>
+          <Link
+            className="slider-slide"
+            href={current.href}
+            style={{ backgroundImage: `linear-gradient(115deg, rgba(15,39,72,.88), rgba(38,83,159,.55)), url("${current.image}")` }}
+          >
             <div className="wrap">{inner}</div>
           </Link>
         )}

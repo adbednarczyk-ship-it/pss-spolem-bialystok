@@ -199,16 +199,18 @@ button, input, select, textarea { font: inherit; }
 .slider { width: 100%; margin: 36px 0 0; position: relative; z-index: 2; }
 .slider-frame { position: relative; width: 100%; }
 .slider-slide {
-  display: block;
+  display: flex;
+  align-items: center;
   width: 100%;
-  min-height: 280px;
-  padding: 48px 0 64px;
+  height: 360px;
+  padding: 0;
   border-radius: 0;
   color: #fff;
-  background:
-    linear-gradient(115deg, rgba(15, 39, 72, .94), rgba(38, 83, 159, .78)),
-    url("/hero-market.webp") center/cover;
+  background-color: var(--blue-deep);
+  background-size: cover;
+  background-position: center;
 }
+.slider-copy { max-width: 36rem; }
 .slider-slide h2 { margin: 10px 0 8px; font-size: clamp(26px, 4vw, 40px); max-width: 16ch; }
 .slider-slide p { max-width: 46ch; margin: 0 0 18px; color: rgba(255,255,255,.9); }
 .slider-nav {
@@ -226,8 +228,8 @@ button, input, select, textarea { font: inherit; }
   cursor: pointer;
   box-shadow: 0 8px 20px rgba(15, 39, 72, .16);
 }
-.slider-nav.prev { left: max(12px, calc((100vw - min(1120px, calc(100% - 32px))) / 2 - 8px)); }
-.slider-nav.next { right: max(12px, calc((100vw - min(1120px, calc(100% - 32px))) / 2 - 8px)); }
+.slider-nav.prev { left: 16px; }
+.slider-nav.next { right: 16px; }
 .slider-dots {
   position: absolute;
   left: 50%;
@@ -247,8 +249,8 @@ button, input, select, textarea { font: inherit; }
 }
 .slider-dots button.active { background: #fff; width: 22px; border-radius: 99px; }
 @media (max-width: 700px) {
-  .slider-slide { padding: 24px 20px 52px; }
-  .slider-nav { display: none; }
+  .slider-slide { height: 400px; }
+  .slider-nav { width: 36px; height: 36px; }
 }
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: -28px; position: relative; z-index: 3; }
 .stat, .card, .panel { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
