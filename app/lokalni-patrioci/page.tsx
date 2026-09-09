@@ -12,6 +12,13 @@ export default function Page() {
         <h1>Jesteśmy lokalnymi patriotami</h1>
         <div className="board-photos">
           <figure>
+            <img src="/prezes-kulesza.jpg" alt={company.president} width={768} height={512} />
+            <figcaption>
+              <strong>{company.president}</strong>
+              <span>Prezes Zarządu</span>
+            </figcaption>
+          </figure>
+          <figure>
             <img src="/prezes-chalecka.jpg" alt={company.vice} width={768} height={498} />
             <figcaption>
               <strong>{company.vice}</strong>
