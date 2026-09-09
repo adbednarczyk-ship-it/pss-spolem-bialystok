@@ -4,9 +4,17 @@ import { company } from "@/lib/data";
 export function Footer() {
   return (
     <footer className="footer">
+      <div className="wrap">
+        <img
+          className="footer-logo"
+          src="/logo.webp"
+          alt="PSS Społem Białystok"
+          width="220"
+          height="68"
+        />
+      </div>
       <div className="wrap grid grid-3">
         <div>
-          <img src="/logo.webp" alt="PSS Społem Białystok" width="220" height="68" style={{height:48,width:"auto",marginBottom:12,filter:"brightness(0) invert(1)"}} />
           <strong>{company.short}</strong>
           <p>
             {company.address}
