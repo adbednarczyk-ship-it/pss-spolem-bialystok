@@ -59,11 +59,7 @@ export function Header() {
             height={178}
           />
           <span className="brand-meta">
-            <span className="brand-year">Od {company.founded}</span>
-            <span className="capital-mark">
-              <span className="capital-flag" aria-hidden="true" />
-              Polski kapitał
-            </span>
+            <span className="brand-motto">Tradycja handlu od {company.founded}</span>
           </span>
         </Link>
 
