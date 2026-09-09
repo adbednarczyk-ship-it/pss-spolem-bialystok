@@ -7,7 +7,6 @@ export default function HomePage() {
     <>
       <section className="hero">
         <div className="wrap">
-          <p className="chip" style={{ background: "rgba(255,255,255,.16)", color: "#fff" }}>Od {company.founded} roku w Białymstoku</p>
           <h1>Świeże. Lokalne. Nasze.</h1>
           <p>Sieć sklepów, własna piekarnia, wędliny i bary drive. Spółdzielnia z polskim kapitałem — blisko domu.</p>
           <div className="hero-actions">

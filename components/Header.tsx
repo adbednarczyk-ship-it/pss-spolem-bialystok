@@ -58,6 +58,13 @@ export function Header() {
             width={575}
             height={178}
           />
+          <span className="brand-meta">
+            <span className="brand-year">Od {company.founded}</span>
+            <span className="capital-mark">
+              <span className="capital-flag" aria-hidden="true" />
+              Polski kapitał
+            </span>
+          </span>
         </Link>
 
         <nav className="nav" aria-label="Główne">
