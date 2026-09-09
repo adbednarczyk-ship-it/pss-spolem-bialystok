@@ -411,8 +411,9 @@ button, input, select, textarea { font: inherit; }
   .brand-logo { height: 56px; }
   .header-cta .btn { display: none; }
   .stats { display: none; }
-  .spotlight { margin-top: 0; }
+  .spotlight { margin-top: 14px; }
   .spotlight .stats { margin: 0; }
+  .slider { padding-top: 2px; }
   .hero {
     height: auto;
     min-height: 220px;
