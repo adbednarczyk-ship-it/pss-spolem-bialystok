@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
 :root {
   --blue: #26539f;
   --blue-dark: #16386f;
@@ -397,9 +397,10 @@ button, input, select, textarea { font: inherit; }
 .portrait { width: 100%; margin: 0; }
 .portrait img {
   width: 100%;
-  height: 210px;
+  height: auto;
+  aspect-ratio: 768 / 498;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 20%;
   border-radius: 16px;
   display: block;
   box-shadow: 0 10px 24px rgba(15, 39, 72, .12);
@@ -413,12 +414,13 @@ button, input, select, textarea { font: inherit; }
 }
 .portrait span { color: var(--muted); font-size: 13px; }
 .letter {
-  font-family: Caveat, "Segoe Script", cursive;
+  font-family: "Marck Script", "Segoe Script", cursive;
   font-size: 28px;
-  font-weight: 700;
-  line-height: 1.35;
+  font-weight: 400;
+  line-height: 1.4;
 }
 .letter p { margin: 0 0 18px; }
+.letter-sign { text-align: right; }
 @media (max-width: 700px) {
   .article-photos { grid-template-columns: 1fr; }
   .letter { font-size: 24px; }
