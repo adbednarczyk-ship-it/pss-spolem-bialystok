@@ -13,7 +13,7 @@ export function HomeSlider() {
     if (paused) return;
     const id = window.setInterval(() => {
       setIndex((i) => (i + 1) % slides.length);
-    }, 7000);
+    }, 4500);
     return () => window.clearInterval(id);
   }, [paused]);
 
