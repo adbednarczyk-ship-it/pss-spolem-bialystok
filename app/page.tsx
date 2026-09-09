@@ -24,14 +24,6 @@ export default function HomePage() {
           ))}
         </div>
       </div>
-      <section className="section"><div className="wrap">
-        <h2>Wejdź od razu</h2>
-        <div className="grid grid-3">
-          {[["/sklepy","Sklepy"],["/bary","Bary i drive"],[company.links.eshop,"E-sklep"],[company.links.gastro,"Białostocka Gastronomia"],["/promocje","Promocje"],["/karta-klienta","Karta i e-bony"]].map(([href,label]) =>
-            href.startsWith("http") ? <a className="card" key={label} href={href} target="_blank" rel="noopener noreferrer"><h3>{label} ↗</h3></a> : <Link className="card" key={label} href={href}><h3>{label}</h3></Link>
-          )}
-        </div>
-      </div></section>
       <section className="section band"><div className="wrap">
         <h2>Promocje</h2>
         <div className="grid grid-3">{promos.map((p)=><article className="card" key={p.title}><span className="chip">{p.tag}</span><h3>{p.title}</h3><p>{p.text}</p></article>)}</div>
