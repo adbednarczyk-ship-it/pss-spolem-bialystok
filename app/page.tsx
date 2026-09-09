@@ -11,11 +11,6 @@ export default function HomePage() {
           <p className="hero-kicker">Tradycja handlu od {company.founded}</p>
           <h1>Świeże. Lokalne. Nasze.</h1>
           <p>Sieć sklepów, własna piekarnia, wędliny i bary drive. Spółdzielnia z polskim kapitałem — blisko domu.</p>
-          <div className="hero-actions">
-            <Link className="btn btn-primary" href="/sklepy">Znajdź sklep</Link>
-            <a className="btn btn-light" href={company.links.eshop} target="_blank" rel="noopener noreferrer">Zamów w e-sklepie</a>
-            <Link className="btn btn-outline" href="/karta-klienta">Karta klienta</Link>
-          </div>
         </div>
       </section>
       <section className="spotlight">
