@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { company, news, promos } from "@/lib/data";
+import { company, news } from "@/lib/data";
 import { StoreFinder } from "@/components/StoreFinder";
 import { HomeSlider } from "@/components/HomeSlider";
 
@@ -23,10 +23,6 @@ export default function HomePage() {
         </div>
         <HomeSlider />
       </section>
-      <section className="section band"><div className="wrap">
-        <h2>Promocje</h2>
-        <div className="grid grid-3">{promos.map((p)=><article className="card" key={p.title}><span className="chip">{p.tag}</span><h3>{p.title}</h3><p>{p.text}</p></article>)}</div>
-      </div></section>
       <section className="section"><div className="wrap">
         <h2>Aktualności</h2>
         <div className="grid grid-3">{news.map((n)=><article className="card" key={n.slug}><p className="muted">{n.date}</p><h3><Link href={`/aktualnosci/${n.slug}`}>{n.title}</Link></h3><p>{n.lead}</p></article>)}</div>
