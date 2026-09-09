@@ -385,3 +385,29 @@ button, input, select, textarea { font: inherit; }
   .stat b { font-size: 18px; }
   .stat span { font-size: 11px; }
 }
+
+.article { max-width: 760px; }
+.board-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 320px));
+  gap: 16px;
+  margin: 8px 0 28px;
+}
+.board-photos figure { margin: 0; }
+.board-photos img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center 18%;
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 10px 24px rgba(15, 39, 72, .12);
+}
+.board-photos figcaption {
+  display: grid;
+  gap: 2px;
+  margin-top: 8px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 14px;
+}
+.board-photos span { color: var(--muted); font-size: 13px; }

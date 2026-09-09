@@ -5,16 +5,20 @@ export const metadata = { title: "Jesteśmy lokalnymi patriotami" };
 export default function Page() {
   return (
     <section className="section band-together">
-      <div className="wrap" style={{ maxWidth: 760 }}>
+      <div className="wrap article">
         <p className="hero-kicker" style={{ color: "var(--muted)", letterSpacing: ".14em" }}>
           Spółdzielnia
         </p>
         <h1>Jesteśmy lokalnymi patriotami</h1>
-        <p className="muted">
-          {company.president}, Prezes Zarządu
-          <br />
-          {company.vice}, Zastępca Prezesa Zarządu
-        </p>
+        <div className="board-photos">
+          <figure>
+            <img src="/prezes-chalecka.jpg" alt={company.vice} width={768} height={498} />
+            <figcaption>
+              <strong>{company.vice}</strong>
+              <span>Zastępca Prezesa Zarządu</span>
+            </figcaption>
+          </figure>
+        </div>
         <p>
           Jesteśmy jedną z najstarszych marek Białegostoku, obecną na rynku od zaborów przez czasy I RP, PRL-u aż po wolną Polskę. W czym tkwi fenomen naszej Spółdzielni, która w czasach wzmożonej konkurencji stale utrzymuje pozycję lidera? Niewątpliwie trudno byłoby zbudować tak rozpoznawalną markę bez najwyższej jakości produktów, oferowanych w sklepach i barach. Na bieżąco sprzedajemy świeżą żywność, którą sami produkujemy w swoich zakładach. Świeże grupy towarowe: pieczywo, mięso, owoce, warzywa, garmażerka i nabiał stanowią ponad 60% udziału w naszym obrocie. O tym, że białostoczanie wybierają rodzime „Społem”, decyduje także to, że sklepy sieci znajdują się blisko klientów, a nasza obsługa nie jest anonimowa — kupujący znają naszych sprzedawców. Nie bez znaczenia jest także pochodzenie produktów. Do naszych wypieków piekarskich i ciastkarskich kupujemy mąkę z terenu województwa podlaskiego. Mięso pochodzi z ubojni lokalnych producentów, podobnie warzywa i owoce. Zakup lokalnych produktów i promocja miejscowych przedsiębiorców niewątpliwie wpisują się w idee patriotyzmu gospodarczego.
         </p>
